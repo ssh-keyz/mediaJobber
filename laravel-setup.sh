@@ -31,13 +31,6 @@ echo "Installing and configuring MySQL..."
 apt install -y mysql-server
 mysql_secure_installation
 
-# Create a new Laravel project
-echo "Creating a new Laravel 10 project..."
-composer create-project --prefer-dist laravel/laravel laravel-10 "10.*"
-
-# Change to the project directory
-cd laravel-10
-
 # Install required NPM packages and compile assets
 echo "Installing NPM packages and compiling assets..."
 npm install
@@ -46,10 +39,6 @@ npm run dev
 # Generate an application key
 echo "Generating application key..."
 php artisan key:generate
-
-# Set up the .env file for your database connection
-echo "Please configure your .env file with appropriate database credentials, then run:"
-echo "php artisan migrate"
 
 echo "Laravel 10 environment setup complete!"
 
